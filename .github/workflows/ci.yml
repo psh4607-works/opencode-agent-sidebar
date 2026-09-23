@@ -9,7 +9,9 @@ on:
 jobs:
   build:
     name: test + typecheck + build
-    runs-on: ubuntu-latest
+    runs-on:
+      group: Default
+      labels: [self-hosted, Linux, X64, ci-linux, ephemeral]
     steps:
       - uses: actions/checkout@v4
 
